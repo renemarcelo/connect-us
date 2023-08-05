@@ -6,7 +6,7 @@ version: 2.1
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   orb-hello:
-    orb
+    orb:
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
