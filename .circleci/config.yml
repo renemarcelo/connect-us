@@ -15,6 +15,7 @@ jobs:
 
     docker: # executor type
       - image: cimg/base:stable # primary container will run the latest, production-ready base image
+    executor: node/default
 
     
     steps:
