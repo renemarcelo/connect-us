@@ -11,8 +11,8 @@ jobs:
   connect-us-app:
     executor: heroku/default
 
-    #docker: # executor type
-      #- image: cimg/base:stable # primary container will run the latest, production-ready base image
+    docker: # executor type
+      - image: cimg/node # primary container will run the latest, production-ready base image
 
     
     steps:
