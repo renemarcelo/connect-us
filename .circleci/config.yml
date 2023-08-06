@@ -4,7 +4,7 @@ version: 2.1
 
 orbs:
   heroku: circleci/heroku@2.0
-  node:circleci/node@5.1.0
+  node: circleci/node@5.1.0
   #python: circleci/python@2.1.1
 
 # Define a job to be invoked later in a workflow.
