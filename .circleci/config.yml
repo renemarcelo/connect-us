@@ -4,6 +4,8 @@ version: 2.1
 
 orbs:
   heroku: circleci/heroku@2.0
+  node:circleci/node@5.1.0
+  #python: circleci/python@2.1.1
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
@@ -12,16 +14,19 @@ jobs:
     #executor: heroku/default
 
     docker: # executor type
-      - image: cimg/node:20.5.0 # primary container will run the latest, production-ready base image
+      - image: cimg/base:stable # primary container will run the latest, production-ready base image
 
     
     steps:
       - checkout
-      - run:
+      - node/install:
+          install-packages: true
+      - run: node --version
           #name: "Say hello"
           #command: "echo Hello, World!"
-          name: "NPM install"
-          command: npm install
+          #name: "NPM install"
+          #command: npm install
+          
       - run:
           command: craco build
 # Orchestrate jobs using workflows
