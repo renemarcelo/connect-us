@@ -19,6 +19,7 @@ jobs:
     
     steps:
       - checkout
+      - run: sudo npm install -g npm@latest
       - node/install-packages:
           override-ci-command: npm install
       - run: node --version
