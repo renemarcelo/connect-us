@@ -19,8 +19,7 @@ jobs:
     
     steps:
       - checkout
-      - node/install:
-          install-yarn: false
+      - node/install-packages
       - run: node --version
           #name: "Say hello"
           #command: "echo Hello, World!"
