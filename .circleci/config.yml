@@ -21,6 +21,7 @@ jobs:
       - checkout
       - run: sudo npm install -g npm@latest
       - node/install-packages:
+          pkg-manager: npm
           override-ci-command: npm install
       #- run: node --version
           #name: "Say hello"
