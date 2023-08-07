@@ -13,7 +13,7 @@ jobs:
   connect-us-app:
 
     docker: # executor type
-      - image: cimg/node:15.1 # primary container will run the latest, production-ready base image
+      - image: cimg/node:16.13 # supported engine and it wil run the latest, production-ready base image
     executor: node/default
 
     
