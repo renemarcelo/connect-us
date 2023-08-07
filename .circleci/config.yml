@@ -22,10 +22,10 @@ jobs:
     
     steps:
       - checkout
-      - run: sudo npm install -g npm@latest
+      #- run: sudo npm install -g npm@latest
       - node/install-packages:
           pkg-manager: npm
-          override-ci-command: npm install
+          #override-ci-command: npm install
       #- run: node --version
           #name: "Say hello"
           #command: "echo Hello, World!"
@@ -33,7 +33,7 @@ jobs:
           #command: npm install
           
       - run:
-          command: craco build
+          command: npm —version
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
