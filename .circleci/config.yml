@@ -11,7 +11,7 @@ orbs:
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   connect-us-app:
-    #executor: heroku/default
+    executor: node/default
 
     docker: # executor type
       - image: cimg/node:15.1 # primary container will run the latest, production-ready base image
