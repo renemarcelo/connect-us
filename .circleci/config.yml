@@ -14,7 +14,10 @@ jobs:
 
     #docker: # executor type
       #- image: cimg/python:3.7-node # supported engine and it wil run the latest, production-ready base image
-    #executor: node/default
+    
+
+
+    executor: node/default
 
     
     steps:
