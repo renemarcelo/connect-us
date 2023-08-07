@@ -20,10 +20,10 @@ jobs:
     
     steps:
       - checkout
-      - run: sudo npm install -g npm@latest
-      - node/install-packages:
-          override-ci-command: npm install
-      - run: node --version
+      #- run: sudo npm install -g npm@latest
+      - node/install-packages
+          #override-ci-command: npm install
+      #- run: node --version
           #name: "Say hello"
           #command: "echo Hello, World!"
           #name: "NPM install"
