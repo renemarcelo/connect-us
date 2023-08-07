@@ -4,8 +4,17 @@ orbs:
   node: circleci/node@5.1.0
   #python: circleci/python@2.1.1
 
+jobs:
+  install-node-example:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+          node-version: '15.9'
+      - run: node --version
 workflows:
-  run-npm-command:
+  test_my_app:
     jobs:
-      - node/run:
-          npm-run: build
+      - install-node-example
