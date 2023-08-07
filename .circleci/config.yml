@@ -4,15 +4,10 @@ orbs:
   #heroku: circleci/heroku@2.0
   node: circleci/node@5.1.0
   #python: circleci/python@2.1.1
-
-
-jobs:
-  connect-us-app:
-      - node/run:
-        npm-run: build
           
 
 workflows:
-  say-hello-workflow:
+  run-npm-command:
     jobs:
-      - connect-us-app
+      - node/run:
+        npm-run: build
