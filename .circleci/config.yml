@@ -10,4 +10,4 @@ workflows:
   run-npm-command:
     jobs:
       - node/run:
-        npm-run: build
+          npm-run: build
