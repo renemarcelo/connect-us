@@ -14,7 +14,7 @@ jobs:
     #executor: heroku/default
 
     docker: # executor type
-      - image: cimg/base:stable # primary container will run the latest, production-ready base image
+      - image: cimg/node:15.1 # primary container will run the latest, production-ready base image
     executor: node/default
 
     
