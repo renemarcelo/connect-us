@@ -9,8 +9,7 @@ jobs:
     docker:
       - image: cimg/node:15.9.0
 
-    executor: 
-      name: node/default 
+    executor: node/default 
  
     steps:
       - checkout
