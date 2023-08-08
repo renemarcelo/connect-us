@@ -3,8 +3,22 @@ orbs:
   #heroku: circleci/heroku@2.0
   node: circleci/node@5.1.0
   #python: circleci/python@2.1.1
+    docker: circleci/docker@1.4.0
 
 jobs:
+
+  machine-job:
+    machine: true
+    steps:
+      - docker/check:
+          docker-username: DOCKERHUB_LOGIN  # DOCKER_LOGIN is the default value, if it exists, it automatically would be used.
+          docker-password: DOCKERHUB_PASSWORD  # DOCKER_PASSWORD is the default value
+      - docker/pull:
+          images: 'circleci/node:latest'
+
+
+
+
   build_and_test: # this can be any name you choose
     docker:
       - image: cimg/node:15.9.0-node
@@ -20,5 +34,13 @@ jobs:
 workflows:
   test_my_app:
     jobs:
+
+          - machine-job:
+          context:
+            - build-env-vars
+            - docker-hub-creds
+
+            
       - build_and_test
+
 
