@@ -14,7 +14,7 @@ parameters:
 jobs:
   frontend-test:
     docker:
-      - image: cimg/base:2023.08
+      - image: cimg/base:2023.08-node
     steps:
       - checkout
       - node/install-packages
