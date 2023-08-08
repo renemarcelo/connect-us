@@ -6,9 +6,12 @@ orbs:
 
 jobs:
   build_and_test: # this can be any name you choose
+    docker:
+      - image: cimg/node:15.9.0
+
     executor: 
       name: node/default 
-      tag: '15.9'
+ 
     steps:
       - checkout
       - node/install-packages:
