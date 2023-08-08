@@ -34,8 +34,8 @@ workflows:
     jobs:
       - machine-job:
           context:
-            - build-env-vars
-            - docker-hub-creds
+            - docker-auth
+            # - build-env
             
       - build_and_test
 
