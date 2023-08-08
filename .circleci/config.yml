@@ -13,19 +13,9 @@ jobs:
  
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
-       
+      - node/install-packages
       - run:
           command: npm run test
-          name: Run tests
-      - run:
-          command: npm run build
-          name: Build app
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            -
 
 workflows:
   test_my_app:
