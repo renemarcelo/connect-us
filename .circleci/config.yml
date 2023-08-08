@@ -6,12 +6,17 @@ orbs:
 
 jobs:
   build_and_test: # this can be any name you choose
-    executor: node/default # use the default executor defined within the orb
+    executor: 
+      name: node/default 
+      tag: '15.9'
+
+
+# use the default executor defined within the orb
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-          node-version: 15.9
+       
       - run:
           command: npm run test
           name: Run tests
