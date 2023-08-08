@@ -1,4 +1,4 @@
-version: 2.1version: 2.1
+version: 2.1
 
 orbs:
   # The python orb contains a set of prepackaged circleci configuration you can use repeatedly in your configurations files
