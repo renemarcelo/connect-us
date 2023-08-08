@@ -21,6 +21,10 @@ jobs:
       - run:
           name: Run tests
           command: npm test
+      # run this app
+      - run:
+          command: npm run build
+          name: Build app
 
 
   backend-test:
