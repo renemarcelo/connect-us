@@ -2,6 +2,9 @@
   "name": "react-jwt-template",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@googlemaps/react-wrapper": "^1.1.11",
