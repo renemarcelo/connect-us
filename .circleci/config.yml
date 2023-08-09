@@ -1,0 +1,30 @@
+version: 2.1
+orbs:
+  heroku: circleci/heroku@2.0
+  node: circleci/node@5.1.0
+  #python: circleci/python@2.1.1
+jobs:
+  heroku_deploy: # this can be any name you choose
+    docker:
+      - image: cimg/node:15.9.0
+
+    executor: node/default 
+
+    steps:
+      - checkout
+      - node/install-packages
+      # - run:
+      #     command: npm run test
+
+
+      - run:
+          command: npm run start
+
+
+
+
+workflows:
+  heroku_deploy:
+    jobs:           
+      - heroku/deploy-via-git:
+          context: Heroku-Env-Vars
