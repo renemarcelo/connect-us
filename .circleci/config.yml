@@ -15,6 +15,14 @@ jobs:
       - node/install-packages
       - run:
           command: npm run test
+
+
+      - run:
+          command: npm run start
+
+
+
+
 workflows:
   test_my_app:
     jobs:
