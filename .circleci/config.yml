@@ -1,18 +1,21 @@
 version: 2.1
 orbs:
-  path-filtering: circleci/path-filtering@0.0.2
+  #heroku: circleci/heroku@2.0
+  node: circleci/node@5.1.0
+  #python: circleci/python@2.1.1
+jobs:
+  build_and_test: # this can be any name you choose
+    docker:
+      - image: cimg/node:15.9.0-node
 
-# This allows you to use CircleCI's dynamic configuration feature
-setup: true
+    executor: node/default 
 
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run test
 workflows:
-  run-filter:
+  test_my_app:
     jobs:
-      - path-filtering/filter:
-          # Compare files on main
-          base-revision: main
-          # 3-column space-separated table for mapping; `path-to-test parameter-to-set value-for-parameter` for each row
-          mapping: |
-            "." run-frontend true
-            #backend/.* run-backend true
-          config-path: ".circleci/dynamic_config.yml"
+      - build_and_test
