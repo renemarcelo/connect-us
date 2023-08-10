@@ -3,6 +3,13 @@ orbs:
   heroku: circleci/heroku@2.0
   node: circleci/node@5.1.0
   #python: circleci/python@2.1.1
+
+workflows:
+  heroku_deploy:
+    jobs:           
+      - heroku/deploy-via-git:
+          context: Heroku-Env-Vars
+
 jobs:
   heroku_deploy: # this can be any name you choose
     docker:
@@ -23,11 +30,8 @@ jobs:
           name: Deploy Main to Heroku
           command: |
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
+      - run:
+          name: "echo environment variables from org-global context"
+          command: echo $HEROKU_APP_NAME
 
 
-
-workflows:
-  heroku_deploy:
-    jobs:           
-      - heroku/deploy-via-git:
-          context: Heroku-Env-Vars
