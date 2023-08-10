@@ -19,7 +19,10 @@ jobs:
 
       - run:
           command: npm run start
-
+      - run:
+          name: Deploy Main to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
 
 
 
