@@ -9,15 +9,17 @@ jobs:
     docker:
       - image: cimg/node:15.9.0
     steps:
+      
       - checkout
-    # build job ommitted for brevity
+
       - node/install-packages
       - run:
         command: npm run start
       - run:
         command: craco build
+        
   deploy:
-    context: herokuEnvVars
+
     docker:
       - image: cimg/node:15.9.0
     steps:
@@ -31,6 +33,7 @@ workflows:
     jobs:
       - build
       - deploy:
+          context: herokuEnvVars
           requires:
             - build # only run deploy-via-git job if the build job has completed
           filters:
