@@ -17,14 +17,14 @@ jobs:
       - run:
         command: craco build
   deploy:
+    context: herokuEnvVars
     docker:
       - image: cimg/node:15.9.0
     steps:
       - checkout
       - run:
           name: Deploy Main to Heroku
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
 
 workflows:
   build-deploy:
