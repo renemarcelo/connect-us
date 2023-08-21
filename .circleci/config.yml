@@ -12,11 +12,14 @@ jobs:
     steps:
       
       - checkout
-
-      - node/install-packages
+      - run: sudo npm install -g npm@latest
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
+      - run: npm run test
       
       - run:
-        command: craco build
+        command: nom run build
         
   deploy:
 
