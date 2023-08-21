@@ -3,7 +3,7 @@ import CountyMap from "../../components/GoogleMap/GoogleMap";
 import "./FormResults.css"
 import { fetchCountyInfo } from "../../services/wikiService";
 import Photos from "../../components/Photos/Photos"
-import PreLoader from "../../components/PreLoader/PreLoader";
+//import PreLoader from "../../components/PreLoader/PreLoader";
 
 
 
