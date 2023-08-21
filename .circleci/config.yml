@@ -6,7 +6,7 @@ orbs:
 #   #python: circleci/python@2.1.1
 
 jobs:
-  build:
+  build_and_build:
     docker:
       - image: cimg/node:15.9.0
     steps:
@@ -34,11 +34,11 @@ jobs:
 workflows:
   build-deploy:
     jobs:
-      - build
+      - build_and_build
       - deploy:
           context: herokuEnvVars
           requires:
-            - build # only run deploy-via-git job if the build job has completed
+            - build_and_build # only run deploy-via-git job if the build job has completed
           filters:
             branches:
               only: heroku-deploy-setup # only run deploy-via-git job on main branch
