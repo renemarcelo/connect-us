@@ -34,9 +34,7 @@ jobs:
 ​​      - heroku/deploy-via-git:
 ​​          app-name: renes-2024-connect-us 
 ​​          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git          
-          name: Deploy Main to Heroku
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
-
+        
 workflows:
   build-deploy:
     jobs:
