@@ -14,8 +14,7 @@ jobs:
       - checkout
 
       - node/install-packages
-      - run:
-        command: npm run start
+      
       - run:
         command: craco build
         
