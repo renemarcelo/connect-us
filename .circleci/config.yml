@@ -29,12 +29,9 @@ jobs:
       - image: cimg/node:15.9.0
     steps:
       - checkout
-
-​​
 ​​      - heroku/deploy-via-git:
 ​​          app-name: renes-2024-connect-us 
-​​          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git          
-        
+​​          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/gi
 workflows:
   build-deploy:
     jobs:
