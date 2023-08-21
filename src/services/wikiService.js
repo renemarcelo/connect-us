@@ -1,4 +1,4 @@
-#const BASE_URL = `https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=1&prop=extracts&gsrsearch=`
+//const BASE_URL = `https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=1&prop=extracts&gsrsearch=`
 // https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&origin=*&gsrlimit=1&prop=extracts&gsrsearch=
 
 // Second: https://en.wikipedia.org/w/api.php?action=query&generator=search&prop=extract&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=
