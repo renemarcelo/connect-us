@@ -1,4 +1,4 @@
-Heroku Setup [![CircleCI](https://dl.circleci.com/status-badge/img/gh/renemarcelo/connect-us/tree/heroku-deploy-setup.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/renemarcelo/connect-us/tree/heroku-deploy-setup)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/renemarcelo/connect-us/tree/heroku-deploy-setup.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/renemarcelo/connect-us/tree/heroku-deploy-setup)
 
 <a id='top'></a>
 
