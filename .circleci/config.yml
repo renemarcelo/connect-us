@@ -15,11 +15,13 @@ jobs:
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
-      - run: 
-        command: npm run test
+      - run:
+          name: frontend test
+          command: npm run test
       
       - run:
-        command: npm run build
+          name: frontend build
+          command: npm run build
         
   deploy:
 
