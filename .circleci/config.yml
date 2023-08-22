@@ -11,7 +11,7 @@ jobs:
     steps:
       
       - checkout
-      - run: sudo npm install -g npm@latest
+      - run: sudo npm install -g npm@7
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install --production
