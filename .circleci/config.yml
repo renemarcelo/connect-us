@@ -14,7 +14,7 @@ jobs:
       - run: sudo npm install -g npm@latest
       - node/install-packages:
           cache-path: ~/project/node_modules
-          override-ci-command: npm install
+          override-ci-command: npm install --production
       #- run:
           #name: frontend test
           #command: npm run test
