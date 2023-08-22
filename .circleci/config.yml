@@ -30,7 +30,7 @@ jobs:
     steps:
       - checkout
 ​​      - heroku/deploy-via-git:
-​​          app-name: renes-2024-connect-us 
+​​          app-name: renes-2024-connect-us-staging 
 ​​          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/gi
 workflows:
   build-deploy:
